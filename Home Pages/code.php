@@ -1,0 +1,127 @@
+<?php
+session_start();
+include("../config.php");
+
+if(isset($_POST['registerbtn']))
+{
+    $studentname = $_POST['name'];
+    $rollno = $_POST['rollno'];
+    $branch = $_POST['branch'];
+    $year = $_POST['year'];
+    $section = $_POST['section'];
+    $gracemarks = $_POST['marks'];
+
+
+    $rollno_query = "SELECT * FROM studentsparticipated WHERE rolno='$email' ";
+    $rollno_query_run = mysqli_query($db, $email_query);
+    if(mysqli_num_rows($rollno_query_run) > 0)
+    {
+        $_SESSION['status'] = "RollNo is Already Taken. Please Re-check once again.";
+        $_SESSION['status_code'] = "error";
+        $MSG = 'Location: register.php';
+        header($MSG);  
+    }
+    else
+    {
+        $query = "INSERT INTO studentsparticipated (studentName,rollno,branch,year,section,graceMarks) VALUES ('$studentname','$rollno','$branch','$year','$section','$gracemarks')";
+        $query_run = mysqli_query($db, $query);
+            
+        if($query_run)
+        {
+
+            $_SESSION['status'] = " Student info Added";
+            $_SESSION['status_code'] = "success";
+            $MSG = 'Location: register.php';
+            header($MSG);
+        }
+        else 
+        {
+            $_SESSION['status'] = "Student info Not Added";
+            $_SESSION['status_code'] = "error";
+            $MSG = 'Location: register.php';
+            header($MSG);  
+        }
+        
+    }
+}
+if(isset($_POST['updatebtn']))
+{
+    $id = $_POST['edit_id'];
+    $studentname = $_POST['edit_name'];
+    $rollno = $_POST['edit_rollno'];
+    $branch = $_POST['edit_branch'];
+    $year = $_POST['edit_year'];
+    $section = $_POST['edit_section'];
+    $gracemarks = $_POST['edit_gracemarks'];
+    $query = "UPDATE studentsparticipated SET studentName='$studentname', rollno='$rollno', branch='$branch', year='$year', section='$section', graceMarks='$gracemarks' WHERE id='$id' ";
+    $query_run = mysqli_query($db, $query);
+
+    if($query_run)
+    {
+        $_SESSION['status'] = "Your Data is Updated";
+        $_SESSION['status_code'] = "success";
+        $MSG = 'Location: register.php';
+        header($MSG); 
+    }
+    else
+    {
+        $_SESSION['status'] = "Your Data is NOT Updated";
+        $_SESSION['status_code'] = "error";
+        $MSG = 'Location: register.php';
+        header($MSG); 
+    }
+}
+if(isset($_POST['delete_btn']))
+{
+    $id = $_POST['delete_id'];
+
+    $query = "DELETE FROM studentsparticipated WHERE id='$id' ";
+    $query_run = mysqli_query($db, $query);
+
+    if($query_run)
+    {
+        $_SESSION['status'] = "Your Data is Deleted";
+        $_SESSION['status_code'] = "success";
+        $MSG = 'Location: register.php';
+        header($MSG); 
+    }
+    else
+    {
+        $_SESSION['status'] = "Your Data is NOT DELETED";       
+        $_SESSION['status_code'] = "error";
+        $MSG = 'Location: register.php';
+        header($MSG); 
+    }    
+} 
+if (isset($_POST["export"])) {
+    $query = "SELECT * FROM studentsparticipated";
+    $query_run = mysqli_query($db, $query);
+
+    $timestamp = time();
+    $filename = 'Export_excel_' . $timestamp . '.xls';
+        
+    header("Content-Type: application/vnd.ms-excel");
+    header("Content-Disposition: attachment; filename=\"$filename\"");    
+    $isPrintHeader = false;
+    
+    if(mysqli_num_rows($query_run) > 0)
+        {
+            while ($row =mysqli_fetch_assoc($query_run)) {
+                if (! $isPrintHeader) {
+                    echo implode("\t", array_keys($row)) . "\n";
+                    $isPrintHeader = true;
+                }
+                echo implode("\t", array_values($row)) . "\n";
+                
+            }
+        }else {
+            echo "No Records Found";
+          }
+
+    exit();
+    
+} 
+
+
+
+?>
