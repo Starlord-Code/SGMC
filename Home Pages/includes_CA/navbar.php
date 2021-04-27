@@ -38,6 +38,20 @@
                                 <li><a href="./view_CA.php">View Marks</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <span class="opener">Profile</span>
+                            <ul>
+                                <li><a href="#">Edit Profile</a></li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li><a href="#">Change Password</a></li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li><a href="#">Settings</a></li>
+                            </ul>
+                        </li>
                         <li><a href="https://intranet.cb.amrita.edu">About Intranet</a></li>
                         <li><a href="https://aumscb.amrita.edu/cas/login?service=https%3A%2F%2Faumscb.amrita.edu%2Faums%2FJsp%2FCore_Common%2Findex.jsp">AUMS Login</a></li>
                         <li><a href="https://cms.cb.amrita.edu/login">CMS</a></li>
