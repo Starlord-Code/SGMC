@@ -9,6 +9,15 @@ include('includes_G/header.php');
 
 
 <div class="container-fluid">
+    <?php
+
+     if(isset($_SESSION['status'])&& $_SESSION['status'] !='')
+     {
+       echo '<h2> '.$_SESSION['status'].' </h2';
+       unset($_SESSION['status']);
+     }
+
+    ?>
         <div class="row">
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 col-xs-12 main">
                 <div class="page-header">
@@ -16,29 +25,29 @@ include('includes_G/header.php');
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 well">
-                        <form id="form" accept-charset="UTF-8" action="/change-password" autocomplete="on" class="form-horizontal" method="post">
+                        <form id="form" accept-charset="UTF-8" action="./pwd_ca.php" autocomplete="on" class="form-horizontal" method="post">
                             <div class="form-inputs">
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="current_password">Current password:*</label>
                                     <div class="col-sm-9 col-md-8">
-                                        <input autocomplete="current-password" class="form-control" id="current_password" name="currentPassword" required="" type="password">
+                                        <input autocomplete="current-password" class="form-control" id="edit_current_password" name="edit_current_password" required="" type="password">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="new_password">Password:*</label>
                                     <div class="col-sm-9 col-md-8">
-                                        <input autocomplete="new-password" class="form-control" id="new_password" name="newPassword" type="password">
+                                        <input autocomplete="new-password" class="form-control" id="edit_new_password" name="edit_new_password" type="password">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="password_confirmation">Confirm Password:*</label>
                                     <div class="col-sm-9 col-md-8">
-                                        <input autocomplete="new-password" class="form-control" id="confirm_password" type="password">
+                                        <input autocomplete="new-password" class="form-control" id="edit_confirm_password" name="edit_confirm_password" type="password">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-actions text-right">
-                                <input class="btn btn-primary" id="submit" type="submit" value="Change password">
+                                <input class="btn btn-primary" id="submit" type="submit" name="PwdChangebtn" value="Change password">
                             </div>
                         </form>
                         <button type="button" class="btn btn-info" onclick="location.href = './class advisor homepage.php';">Go back</button>
@@ -50,15 +59,15 @@ include('includes_G/header.php');
 
 <script>
 
-var newPassword = document.getElementById("new_password");
-var confirmPassword = document.getElementById("confirm_password");
+var newPassword = document.getElementById("edit_new_password");
+var confirmPassword = document.getElementById("edit_confirm_password");
 
 function validatePassword() {
     if (newPassword.value != confirmPassword.value) {
-        document.getElementById("confirm_password").setCustomValidity("Passwords do not match!");
+        document.getElementById("edit_confirm_password").setCustomValidity("Passwords do not match!");
     } else {
         //empty string means no validation error
-        document.getElementById("confirm_password").setCustomValidity('');
+        document.getElementById("edit_confirm_password").setCustomValidity('');
     }
 }
 newPassword.addEventListener("change", validatePassword);
