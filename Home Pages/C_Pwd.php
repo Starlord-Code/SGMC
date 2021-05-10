@@ -40,13 +40,13 @@ include('includes_G/header.php');
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="new_password">Password:*</label>
                                     <div class="col-sm-9 col-md-8">
-                                        <input autocomplete="new-password" class="form-control" id="edit_new_password" name="edit_new_password" type="password">
+                                        <input autocomplete="new-password"  class="form-control" id="edit_new_password" name="edit_new_password" type="password" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="password_confirmation">Confirm Password:*</label>
                                     <div class="col-sm-9 col-md-8">
-                                        <input autocomplete="new-password" class="form-control" id="edit_confirm_password" name="edit_confirm_password" type="password">
+                                        <input autocomplete="confirm-password"  class="form-control" id="edit_confirm_password" name="edit_confirm_password" type="password" required>
                                     </div>
                                 </div>
                             </div>
