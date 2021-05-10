@@ -10,15 +10,18 @@ include('includes_G/header.php');
 
 <div class="container-fluid">
     <?php
+     $username=$_SESSION['login_user'];
 
      if(isset($_SESSION['status'])&& $_SESSION['status'] !='')
      {
        echo '<h2> '.$_SESSION['status'].' </h2';
        unset($_SESSION['status']);
+       
      }
 
     ?>
         <div class="row">
+             
             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 col-xs-12 main">
                 <div class="page-header">
                     <h1>Change Password</h1>
@@ -27,6 +30,7 @@ include('includes_G/header.php');
                     <div class="col-xs-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 well">
                         <form id="form" accept-charset="UTF-8" action="./pwd_ca.php" autocomplete="on" class="form-horizontal" method="post">
                             <div class="form-inputs">
+                                
                                 <div class="form-group">
                                     <label class="control-label col-sm-3 col-md-4" for="current_password">Current password:*</label>
                                     <div class="col-sm-9 col-md-8">
@@ -47,6 +51,7 @@ include('includes_G/header.php');
                                 </div>
                             </div>
                             <div class="form-actions text-right">
+                                <input type="hidden" name="edit_username" value="<?php echo $username ?>">
                                 <input class="btn btn-primary" id="submit" type="submit" name="PwdChangebtn" value="Change password">
                             </div>
                         </form>
