@@ -32,7 +32,7 @@ if(isset($_POST['PwdChangebtn']))
     }
     else
     {
-        $_SESSION['status'] = "Your Password is InCorrect. Please Re-check once again.";
+        $_SESSION['status'] = "Your Current Password is InCorrect. Please Re-check once again.";
         $_SESSION['status_code'] = "error";
         $MSG = 'Location: C_Pwd.php';
         header($MSG);  
