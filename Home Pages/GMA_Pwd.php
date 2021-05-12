@@ -28,7 +28,7 @@ include('includes_G/header.php');
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 well">
-                        <form id="form" accept-charset="UTF-8" action="./pwd_ca.php" autocomplete="on" class="form-horizontal" method="post">
+                        <form id="form" accept-charset="UTF-8" action="./pwd_gma.php" autocomplete="on" class="form-horizontal" method="post">
                             <div class="form-inputs">
                                 
                                 <div class="form-group">

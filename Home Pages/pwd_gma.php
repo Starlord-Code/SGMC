@@ -10,7 +10,7 @@ if(isset($_POST['PwdChangebtn']))
     $username = $_POST['edit_username'];
 
 
-    $rollno_query = "SELECT * FROM eventcordinator WHERE password='$currentpwd' and username='$username' ";
+    $rollno_query = "SELECT * FROM eventcoordinator WHERE password='$currentpwd' and username='$username' ";
     $rollno_query_run = mysqli_query($db, $rollno_query);
     if(mysqli_num_rows($rollno_query_run) > 0)
     {
