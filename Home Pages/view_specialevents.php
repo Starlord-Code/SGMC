@@ -18,7 +18,7 @@ include('includes_G/header.php');
 
   <div class="card-body">
     <?php
-
+     $category=$_SESSION['Special'];
      if(isset($_SESSION['status'])&& $_SESSION['status'] !='')
      {
        echo '<h2> '.$_SESSION['status'].' </h2';
@@ -30,7 +30,7 @@ include('includes_G/header.php');
     <div class="table-responsive">
       <?php
          $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-         $query = "SELECT * FROM studentsparticipated";
+         $query = "SELECT * FROM studentsparticipated where Category='$category'" ;
          $query_run = mysqli_query($connection, $query);
 
 

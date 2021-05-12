@@ -16,6 +16,7 @@ include('includes_G/header.php');
     $_SESSION['NSS']='NSS';
     $_SESSION['Sports']='SPORTS';
     $_SESSION['Others']='OTHERS';
+    $_SESSION['Special']='SPECIAL EVENTS';
 
      
 ?>

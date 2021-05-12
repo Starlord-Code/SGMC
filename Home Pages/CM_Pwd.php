@@ -55,7 +55,7 @@ include('includes_CM/header.php');
                                 <input class="btn btn-primary" id="submit" type="submit" name="PwdChangebtn" value="Change password">
                             </div>
                         </form>
-                        <button type="button" class="btn btn-info" onclick="location.href = './class advisor homepage.php';">Go back</button>
+                        <button type="button" class="btn btn-info" onclick="location.href = './course mentor homepage.php';">Go back</button>
                     </div>
                 </div>
             </div>

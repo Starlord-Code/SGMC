@@ -35,6 +35,7 @@
                                     <li><a href="./view_sports.php">Sports</a></li>
                                     <li><a href="./view_nss.php">NSS</a></li>
                                     <li><a href="./view_cultural.php">Cultural</a></li>
+                                    <li><a href="./view_specialevents.php">Special Events</a></li>
                                     <li><a href="./view_others.php">Others</a></li>
                                 </ul>
                             </li>
