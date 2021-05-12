@@ -10,7 +10,15 @@ include('includes_G/header.php');
 <title>Dashboard</title> 
 </head>
 
+<?php
 
+    $_SESSION['Cultural']='CULTURAL';
+    $_SESSION['NSS']='NSS';
+    $_SESSION['Sports']='SPORTS';
+    $_SESSION['Others']='OTHERS';
+
+     
+?>
   <!-- Banner -->
                 <section class="main-banner">
                     <div class="container-fluid">

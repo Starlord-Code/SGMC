@@ -22,11 +22,22 @@
                     <li>
                         <span class="opener">Grace Marks</span>
                         <ul>
+                            
+
                             <li><a href="./view.php">View</a></li>
                             <li><a href="./generate.php">Generate</a></li>
                             <li><a href="./register.php">Update</a></li>
                         </ul>
                     </li>
+                    <li>
+                                <span class="opener">view</span>
+                                <ul>
+                                    <li><a href="./view_sports.php">Sports</a></li>
+                                    <li><a href="./view_nss.php">NSS</a></li>
+                                    <li><a href="./view_cultural.php">Cultural</a></li>
+                                    <li><a href="./view_others.php">Others</a></li>
+                                </ul>
+                            </li>
                      <li>
                             <span class="opener">Profile</span>
                             <ul>
