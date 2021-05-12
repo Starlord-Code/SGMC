@@ -56,7 +56,21 @@ include('includes_G/header.php');
                 <label> Section </label>
                 <input type="text" name="section" class="form-control" placeholder="Section">
             </div>
-
+            <div class="form-group">
+            <label> Category </label>
+            <select class="form-control"  name="category" aria-label="Default select example" >
+              <option selected>Category</option>
+              <option value="NSS">NSS</option>
+              <option value="SPORTS">Sports</option>
+              <option value="CULTURAL">Cultural</option>
+              <option value="SPECIAL EVENTS">Special Events</option>
+              <option value="OTHERS">Others</option>
+            </select>
+            </div>
+            <div class="form-group">
+                <label> subcategory </label>
+                <input type="text" name="subcategory" class="form-control" placeholder="Section">
+            </div>
             <div class="form-group">
             <label> Grace Marks</label>
             <select class="form-control"  name="marks" aria-label="Default select example" >
@@ -123,6 +137,8 @@ include('includes_G/header.php');
             <th scope="col"> Branch </th>
             <th scope="col"> Year </th>
             <th scope="col"> Section </th>
+            <th scope="col"> Category </th>
+            <th scope="col"> SubCategory </th>
             <th scope="col"> Grace Marks </th>
             <th scope="col">EDIT </th>
             <th scope="col">DELETE </th>
@@ -143,6 +159,8 @@ include('includes_G/header.php');
             <td> <?php echo $row ['branch']; ?> </td>
             <td> <?php echo $row ['year']; ?> </td>
             <td> <?php echo $row ['section']; ?> </td>
+            <td> <?php echo $row ['Category']; ?> </td>
+            <td> <?php echo $row ['subcategory']; ?> </td>
             <td> <?php echo $row ['graceMarks']; ?> </td>
             <td>
                 <form action="register_edit.php" method="post">

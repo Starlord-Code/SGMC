@@ -9,6 +9,8 @@ if(isset($_POST['registerbtn']))
     $branch = $_POST['branch'];
     $year = $_POST['year'];
     $section = $_POST['section'];
+    $category = $_POST['category'];
+    $subcategory = $_POST['subcategory'];
     $gracemarks = $_POST['marks'];
 
 
@@ -23,7 +25,7 @@ if(isset($_POST['registerbtn']))
     }
     else
     {
-        $query = "INSERT INTO studentsparticipated (studentName,rollno,branch,year,section,graceMarks) VALUES ('$studentname','$rollno','$branch','$year','$section','$gracemarks')";
+        $query = "INSERT INTO studentsparticipated (studentName,rollno,branch,year,section,Category,subcategory,graceMarks) VALUES ('$studentname','$rollno','$branch','$year','$section','$category','$subcategory','$gracemarks')";
         $query_run = mysqli_query($db, $query);
             
         if($query_run)

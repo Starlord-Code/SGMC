@@ -46,6 +46,8 @@ include('includes_G/header.php');
             <th scope="col"> Branch </th>
             <th scope="col"> Year </th>
             <th scope="col"> Section </th>
+            <th scope="col"> Category </th>
+            <th scope="col"> SubCategory </th>
             <th scope="col"> Grace Marks </th>
           </tr>
         </thead>
@@ -64,6 +66,8 @@ include('includes_G/header.php');
             <td> <?php echo $row ['branch']; ?> </td>
             <td> <?php echo $row ['year']; ?> </td>
             <td> <?php echo $row ['section']; ?> </td>
+            <td> <?php echo $row ['Category']; ?> </td>
+            <td> <?php echo $row ['subcategory']; ?> </td>
             <td> <?php echo $row ['graceMarks']; ?> </td>
             
           </tr>

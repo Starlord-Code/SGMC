@@ -57,6 +57,24 @@ include('includes_G/header.php');
                                 <input type="text" name="edit_section" value="<?php echo $row['section'] ?>"
                                     class="form-control" placeholder="Enter Sections">
                             </div>
+
+                            <div class="form-group">
+                                <label> Category </label>
+                                <select class="form-control"  name="category" value="<?php echo $row['Category'] ?>"
+                                aria-label="Default select example" >
+                                    <option selected>Category</option>
+                                    <option value="NSS">NSS</option>
+                                    <option value="SPORTS">Sports</option>
+                                    <option value="CULTURAL">Cultural</option>
+                                    <option value="SPECIAL EVENTS">Special Events</option>
+                                    <option value="OTHERS">Others</option>
+                                </select>
+                            </div>
+                             <div class="form-group">
+                                <label> subcategory </label>
+                                <input type="text" name="subcategory" value="<?php echo $row['subcategory'] ?>"
+                                class="form-control" placeholder="subcategory">
+                            </div>
                         
                             <div class="form-group">
                                 <label>Grace Marks</label>
