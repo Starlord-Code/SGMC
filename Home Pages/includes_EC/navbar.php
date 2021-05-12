@@ -17,17 +17,7 @@
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="#">Updated Marks</a></li>
-                        <li>
-                            <span class="opener">Course Marks</span>
-                            <ul>
-                                <li><a href="#">View</a></li>
-                                <li>
-                                    <a href="#"></a>
-                                </li>
-                                <li><a href="#">Update</a></li>
-                            </ul>
-                        </li>
+                         <li><a href="#">Publish</a></li>
                          <li>
                             <span class="opener">Profile</span>
                             <ul>

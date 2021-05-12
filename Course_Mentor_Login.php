@@ -21,7 +21,7 @@
        
          $_SESSION['login_user'] = $myusername;
          
-         header("location: ./Home Pages/course mentor homepage.html");
+         header("location: ./Home Pages/course mentor homepage.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }

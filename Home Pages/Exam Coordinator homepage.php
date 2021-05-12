@@ -18,7 +18,7 @@ include('includes_EC/header.php');
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="banner-caption">
-                                                <h4>Home Page of <em>Event Coordinator</em></h4>
+                                                <h4>Home Page of <em>Exam Coordinator</em></h4>
 
 
                                             </div>
@@ -40,7 +40,7 @@ include('includes_EC/header.php');
                                             <div class="banner-caption">
 
                                                 <span>Choose options from the  left panel to view or update marks.</span>
-                                                <p>For any queries or suggestions contact <strong>cb.en.u4cse18124@cb.students.amrita.edu</strong>.</p>
+                                                <p>For any queries or suggestions contact <strong></strong>.</p>
                                                 <div class="primary-button">
                                                     <a href="#">Read More</a>
                                                 </div>

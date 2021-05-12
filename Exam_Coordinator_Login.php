@@ -21,7 +21,7 @@
        
          $_SESSION['login_user'] = $myusername;
          
-         header("location: ./Home Pages/Exam Coordinator homepage.html");
+         header("location: ./Home Pages/Exam Coordinator homepage.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
