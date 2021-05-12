@@ -25,7 +25,7 @@
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">Change Password</a></li>
+                                <li><a href="./EC_Pwd.php">Change Password</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>

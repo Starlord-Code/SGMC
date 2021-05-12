@@ -33,7 +33,7 @@
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">Change Password</a></li>
+                                <li><a href="./CHF_Pwd.php">Change Password</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
