@@ -19,11 +19,26 @@
                         <li>
                             <span class="opener">Course Marks</span>
                             <ul>
+                                <li><a href="./view_course.php">View</a></li>
+                                <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li><a href="./add_course_details.php">Update</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Grades</span>
+                            <ul>
                                 <li><a href="#">View</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
                                 <li><a href="#">Update</a></li>
+                                 <li>
+                                    <a href="#"></a>
+                                </li>
+                                <li><a href="#">View Intervals</a></li>
+                                
                             </ul>
                         </li>
                          <li>

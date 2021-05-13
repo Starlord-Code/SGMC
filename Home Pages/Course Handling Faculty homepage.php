@@ -9,8 +9,15 @@ include('includes_CHF/header.php');
 <head>
 <title>Dashboard</title> 
 </head>
+<?php
+     $branch=$_SESSION['Branch'];
+     $year=$_SESSION['Year'];
+     $section=$_SESSION['Section'];
+     $subject=$_SESSION['Subject'];
 
-                <!-- Banner -->
+     
+    ?>
+          <!-- Banner -->
                 <section class="main-banner">
                     <div class="container-fluid">
                         <div class="row">

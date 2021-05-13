@@ -94,7 +94,7 @@ aria-hidden="true">
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <form action="logout_CHF.php" method="POST"> 
+        <form action="logout_CM.php" method="POST"> 
            <button type="submit" name="logout_btn" class="btn btn-primary">Logout</button>
         </form>
     </div>
