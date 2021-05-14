@@ -4,15 +4,21 @@ include('../config.php');
 include('includes_CHF/header.php');
 
 ?>
+
 <head>
-<title>View Students Details</title> 
+<title>Details Entry</title> 
 </head>
+
+
+
 <div class="container-fluid">
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Students Details
+            <br> 
+            
     </h6>
   </div>
 
@@ -46,12 +52,10 @@ include('includes_CHF/header.php');
             <th scope="col"> ID </th>
             <th scope="col"> Student Name </th>
             <th scope="col"> RollNo </th>
-            <th scope="col"> P1 </th>
-            <th scope="col"> P2 </th>
-            <th scope="col"> Internals </th>
-            <th scope="col"> EndSem </th>
             <th scope="col"> Total </th>
-            <th scope="col"> Attendance </th>
+            <th scope="col"> Grade </th>
+            <th scope="col">EDIT </th>
+           
           </tr>
         </thead>
         <tbody>
@@ -66,13 +70,14 @@ include('includes_CHF/header.php');
             <td><?php echo $row ['ID']; ?> </td>
             <td> <?php echo $row ['StudentName']; ?></td>
             <td> <?php echo $row ['Rollno']; ?></td>
-            <td> <?php echo $row ['P1']; ?></td>
-            <td> <?php echo $row ['P2']; ?></td>
-            <td> <?php echo $row ['Internals']; ?></td>
-            <td> <?php echo $row ['EndSem']; ?></td>
             <td> <?php echo $row ['Total']; ?></td>
-            <td> <?php echo $row ['Attendance']; ?></td>
-           
+            <td> <?php echo $row ['Grade']; ?></td>
+            <td>
+                <form action="./update_edit_grade_CHF.php" method="post">
+                    <input type="hidden" name="edit_id" value="<?php echo $row ['ID']; ?>">
+                    <button  type="submit" name="edit_btn" class="btn btn-success"> EDIT</button>
+                </form>
+            </td>
             
           </tr>
           
@@ -85,9 +90,7 @@ include('includes_CHF/header.php');
         ?>
         
         </tbody>
-
         <button type="button" class="btn btn-info" onclick="location.href = './Course Handling Faculty homepage.php';">Go back</button>
-
       </table>
 
     </div>

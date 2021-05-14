@@ -29,11 +29,11 @@
                         <li>
                             <span class="opener">Grades</span>
                             <ul>
-                                <li><a href="#">View</a></li>
+                                <li><a href="./view_grade_CHF.php">View</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">Update</a></li>
+                                <li><a href="./update_grade_CHF.php">Update</a></li>
                                  <li>
                                     <a href="#"></a>
                                 </li>

@@ -19,10 +19,10 @@
 		
       if($count == 1) {
        
-         $_SESSION['Branch'] = $row1 ['Branch'];
-         $_SESSION['Year'] =  $row1 ['Years'];
-         $_SESSION['Section'] = $row1 ['Section'];
-         $_SESSION['Subject'] = $row1 ['subjects'];
+         $_SESSION['Branch'] = $row ['Branch'];
+         $_SESSION['Year'] =  $row ['Years'];
+         $_SESSION['Section'] = $row ['Section'];
+         $_SESSION['Subject'] = $row ['subjects'];
          $_SESSION['login_user'] = $myusername;
          
          header("location: ./Home Pages/Course Handling Faculty homepage.php");

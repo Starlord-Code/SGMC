@@ -52,6 +52,7 @@ include('includes_CHF/header.php');
             <th scope="col"> EndSem </th>
             <th scope="col"> Total </th>
             <th scope="col"> Attendance </th>
+            <th scope="col"> Grades </th> 
           </tr>
         </thead>
         <tbody>
@@ -72,7 +73,7 @@ include('includes_CHF/header.php');
             <td> <?php echo $row ['EndSem']; ?></td>
             <td> <?php echo $row ['Total']; ?></td>
             <td> <?php echo $row ['Attendance']; ?></td>
-           
+            <td> <?php echo $row ['Grade']; ?></td>
             
           </tr>
           

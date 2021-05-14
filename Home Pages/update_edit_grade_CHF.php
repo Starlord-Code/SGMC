@@ -31,7 +31,7 @@ include('includes_CHF/header.php');
                 {
                     ?>
 
-                        <form action="code_CHF.php" method="POST">
+                        <form action="code_grade_CHF.php" method="POST">
 
                             <input type="hidden" name="edit_id" value="<?php echo $row['ID'] ?>">
 
@@ -46,38 +46,18 @@ include('includes_CHF/header.php');
                                     placeholder="Enter Rollno">
                             </div>
                             <div class="form-group">
-                                <label> P1 Marks </label>
-                                <input type="text" name="edit_p1" value="<?php echo $row['P1'] ?>" class="form-control" 
-                                placeholder="p1 Marks">
-                            </div>
-                            <div class="form-group">
-                                <label> P2 Marks </label>
-                                <input type="text" name="edit_p2" value="<?php echo $row['P2'] ?>" class="form-control" 
-                                placeholder="P2 Marks">
-                            </div>
-                            <div class="form-group">
-                                <label> Internals </label>
-                                <input type="text" name="edit_internals" value="<?php echo $row['Internals'] ?>" class="form-control" 
-                                placeholder="Internals">
-                                </div>
-                            <div class="form-group">
-                                <label> EndSem Marks </label>
-                                <input type="text" name="edit_endsem" value="<?php echo $row['EndSem'] ?>" class="form-control" 
-                                placeholder="EndSem">
-                            </div>
-                            <div class="form-group">
                                 <label> Total </label>
                                 <input type="text" name="edit_total" value="<?php echo $row['Total'] ?>" class="form-control" 
                                 placeholder="Total">
                             </div>
                             <div class="form-group">
-                                <label> Attendance </label>
-                                <input type="text" name="edit_attendance" value="<?php echo $row['Attendance'] ?>" class="form-control"
-                                 placeholder="Attendance">
+                                <label> Grade </label>
+                                <input type="text" name="edit_grade" value="<?php echo $row['Grade'] ?>" class="form-control"
+                                 placeholder="Grade">
                             </div>
                 
 
-                            <a href="./add_course_details.php" class="btn btn-danger"> CANCEL </a>
+                            <a href="./update_grade_CHF.php" class="btn btn-danger"> CANCEL </a>
                             <button type="submit" name="updatebtn" class="btn btn-primary"> Update </button>
 
                         </form>

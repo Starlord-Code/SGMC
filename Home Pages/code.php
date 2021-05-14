@@ -14,7 +14,7 @@ if(isset($_POST['registerbtn']))
     $gracemarks = $_POST['marks'];
 
 
-    $rollno_query = "SELECT * FROM studentsparticipated WHERE rolno='$email' ";
+    $rollno_query = "SELECT * FROM studentsparticipated WHERE rollno='$email' ";
     $rollno_query_run = mysqli_query($db, $email_query);
     if(mysqli_num_rows($rollno_query_run) > 0)
     {

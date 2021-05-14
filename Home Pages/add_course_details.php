@@ -24,27 +24,27 @@ include('includes_CHF/header.php');
 
             <div class="form-group">
                 <label> Student Name </label>
-                <input type="text" name="name" class="form-control" placeholder="Enter Name">
+                <input type="text" name="name" class="form-control" placeholder="Enter Name" required>
             </div>
             <div class="form-group">
                 <label> Roll No</label>
-                <input type="text" name="rollno" class="form-control" placeholder="Enter CB.EN.U4xxxxxxx">
+                <input type="text" name="rollno" class="form-control" placeholder="Enter CB.EN.U4xxxxxxx" required>
             </div>
             <div class="form-group">
                 <label> P1 Marks </label>
-                <input type="text" name="p1" class="form-control" placeholder="p1 Marks">
+                <input type="text" name="p1" class="form-control" placeholder="p1 Marks" >
             </div>
             <div class="form-group">
                 <label> P2 Marks </label>
-                <input type="text" name="p2" class="form-control" placeholder="P2 Marks">
+                <input type="text" name="p2" class="form-control" placeholder="P2 Marks" >
             </div>
             <div class="form-group">
                 <label> Internals </label>
-                <input type="text" name="internals" class="form-control" placeholder="Internals">
+                <input type="text" name="internals" class="form-control" placeholder="Internals" >
             </div>
             <div class="form-group">
                 <label> EndSem Marks </label>
-                <input type="text" name="endsem" class="form-control" placeholder="EndSem">
+                <input type="text" name="endsem" class="form-control" placeholder="EndSem" >
             </div>
             <div class="form-group">
                 <label> Total </label>
@@ -72,10 +72,9 @@ include('includes_CHF/header.php');
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
   <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Students Details 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
-              Add Student info 
-            </button>
+    <h6 class="m-0 font-weight-bold text-primary">Students Details
+            <br> 
+            
     </h6>
   </div>
 
@@ -97,7 +96,7 @@ include('includes_CHF/header.php');
     <div class="table-responsive">
       <?php
          $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-         $query = "SELECT * FROM student_course_details where  Branch = '$branch' and Years='$year' and Section='$section' and subjects='$subject' ";
+         $query = "SELECT * FROM student_course_details where  Branch = '$branch' and Years='$year' and Section='$section' and Subjects='$subject' ";
          $query_run = mysqli_query($connection, $query);
 
 
@@ -134,7 +133,7 @@ include('includes_CHF/header.php');
             <td> <?php echo $row ['P1']; ?></td>
             <td> <?php echo $row ['P2']; ?></td>
             <td> <?php echo $row ['Internals']; ?></td>
-            <td> <?php echo $row ['Endsem']; ?></td>
+            <td> <?php echo $row ['EndSem']; ?></td>
             <td> <?php echo $row ['Total']; ?></td>
             <td> <?php echo $row ['Attendance']; ?></td>
             <td>
@@ -160,9 +159,14 @@ include('includes_CHF/header.php');
         ?>
         
         </tbody>
-
         <button type="button" class="btn btn-info" onclick="location.href = './Course Handling Faculty homepage.php';">Go back</button>
-
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="button" class="btn btn-primary me-md-2" data-toggle="modal" data-target="#addadminprofile">
+                 Add Student info 
+                 </button>
+                <br>
+                 
+        </div> 
       </table>
 
     </div>
