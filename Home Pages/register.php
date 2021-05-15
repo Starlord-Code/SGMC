@@ -169,11 +169,38 @@ include('includes_G/header.php');
                 </form>
             </td>
             <td>
-                <form action="code.php" method="post">
-                  <input type="hidden" name="delete_id" value="<?php echo $row ['ID']; ?>">
-                  <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
-                </form>
+               
+                  <button type="submit" data-toggle="modal" data-target="#DELETE" 
+                        class="btn btn-danger">
+                        DELETE</button>
+                
             </td>
+             
+            <div class="modal fade" id="DELETE" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "DELETE" below if you are ready to delete the record.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <form action="code.php" method="POST"> 
+                       <input type="hidden" name="delete_id" value="<?php echo $row ['ID']; ?>">
+                       <button type="submit" name="delete_btn" class="btn btn-primary"> DELETE</button>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
           </tr>
           
           <?php
@@ -187,8 +214,11 @@ include('includes_G/header.php');
         </tbody>
 
         <button type="button" class="btn btn-info" onclick="location.href = './Grace Mark Allocator homepage.php';">Go back</button>
-
+        
       </table>
+
+      
+        
 
     </div>
   </div>
