@@ -1,0 +1,13 @@
+.table-bordered th{
+    color:white;
+    background: linear-gradient(to-right,rgb(65, 65, 255),blue);
+    border:none;
+    border-right:1px solid rgb(255, 81, 0);
+    border-bottom:1px solid rgb(255, 81, 0);
+}
+
+.table-bordered td{
+    color: white;
+    background:radial-gradient(circle,rgb(255, 63, 63),rgb(255, 0, 34));
+    border-right: 1px solid blue; 
+}
