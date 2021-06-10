@@ -102,6 +102,7 @@ if(isset($_POST['updatebtn']))
     {
         $_SESSION['status'] = "Your Data is Updated";
         $_SESSION['status_code'] = "success";
+        $_SESSION['updated'] = "False";
         $MSG = 'Location: register.php';
         header($MSG); 
     }
@@ -348,7 +349,8 @@ if(isset($_POST['mark_apply_btn']))
 if(isset($_POST['ca_apply_all_btn']))
 {
     $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-    $query1="SELECT branch,year,section FROM classadvisor WHERE ID=161";
+    $id=$_SESSION["ID"];
+    $query1="SELECT branch,year,section FROM classadvisor WHERE ID = $id";
     $query_run1=mysqli_query($connection,$query1);
     $row =mysqli_fetch_assoc($query_run1);
     $section=$row['section'];
@@ -425,6 +427,7 @@ if(isset($_POST['ca_apply_all_btn']))
           
         $_SESSION['status'] = "Grace Marks are Applied";
         $_SESSION['status_code'] = "success";
+        $_SESSION['updated'] = "True";
         $MSG = 'Location: update_CM_CA.php';
         header($MSG);
 }
@@ -474,6 +477,34 @@ if(isset($_POST['event_delete_btn']))
 } 
 if (isset($_POST["export"])) {
     $query = "SELECT * FROM studentsparticipated ORDER BY Category , subcategory";
+    $query_run = mysqli_query($db, $query);
+
+    $timestamp = time();
+    $filename = 'Export_excel_' . $timestamp . '.xls';
+        
+    header("Content-Type: application/vnd.ms-excel");
+    header("Content-Disposition: attachment; filename=\"$filename\"");    
+    $isPrintHeader = false;
+    
+    if(mysqli_num_rows($query_run) > 0)
+        {
+            while ($row =mysqli_fetch_assoc($query_run)) {
+                if (! $isPrintHeader) {
+                    echo implode("\t", array_keys($row)) . "\n";
+                    $isPrintHeader = true;
+                }
+                echo implode("\t", array_values($row)) . "\n";
+                
+            }
+        }else {
+            echo "No Records Found";
+          }
+
+    exit();
+    
+} 
+if (isset($_POST["publishexport"])) {
+    $query = "SELECT * FROM student_course_details";
     $query_run = mysqli_query($db, $query);
 
     $timestamp = time();
