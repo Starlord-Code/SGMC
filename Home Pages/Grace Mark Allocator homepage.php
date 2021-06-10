@@ -20,6 +20,7 @@ include('includes_G/header.php');
 
      
 ?>
+
   <!-- Banner -->
                 <section class="main-banner">
                     <div class="container-fluid">
