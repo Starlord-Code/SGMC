@@ -17,11 +17,11 @@
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                         <li><a href="#">Publish</a></li>
+                         <li><a href="./publish.php">Publish</a></li>
                          <li>
                             <span class="opener">Profile</span>
                             <ul>
-                                <li><a href="#">Edit Profile</a></li>
+                                <li><a href="EC_profile_edit.php">Edit Profile</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>

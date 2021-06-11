@@ -12,36 +12,35 @@
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="#">Updated Marks</a></li>
                         <li>
                             <span class="opener">Course Marks</span>
                             <ul>
-                                <li><a href="#">View</a></li>
+                                <li><a href="./view_CM_CA.php">View</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">Update</a></li>
+                                <li><a href="update_CM_CA.php">Update</a></li>
                                
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Grace Marks</span>
                             <ul>
-                                <li><a href="#">Allocation for Events</a></li>
+                                <li><a href="./CA_allocation_events.php">Allocation for Events</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">Update Marks</a></li>
+                                <li><a href="update_CM_CA.php">Update Marks</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="./view_CA.php">View Marks</a></li>
+                                <li><a href="./view_grace.php">View Marks</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Profile</span>
                             <ul>
-                                <li><a href="#">Edit Profile</a></li>
+                                <li><a href="./CA_profile_edit.php">Edit Profile</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>

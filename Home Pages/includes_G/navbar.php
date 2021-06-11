@@ -15,15 +15,13 @@
                     <li>
                         <span class="opener">Events</span>
                         <ul>
-                            <li><a href="#">View</a></li>
-                            <li><a href="#">Update</a></li>
+                            <li><a href="./event_view.php">View</a></li>
+                            <li><a href="./event_update.php">Update</a></li>
                         </ul>
                     </li>
                     <li>
                         <span class="opener">Grace Marks</span>
                         <ul>
-                            
-
                             <li><a href="./view.php">View</a></li>
                             <li><a href="./generate.php">Generate</a></li>
                             <li><a href="./register.php">Update</a></li>
@@ -40,9 +38,11 @@
                                 </ul>
                             </li>
                      <li>
+                     <li>
                             <span class="opener">Profile</span>
                             <ul>
-                                <li><a href="#">Edit Profile</a></li>
+
+                                <li><a name="pro_edit" href="./GMA_profile_edit.php?id=164">Edit Profile</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>

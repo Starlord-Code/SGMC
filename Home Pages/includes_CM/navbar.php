@@ -13,21 +13,29 @@
     <!-- Menu -->
     <nav id="menu">
         <ul>
-            <li><a href="#">Updated Marks</a></li>
             <li>
                 <span class="opener">Course Marks</span>
                 <ul>
-                    <li><a href="#">View</a></li>
+                    <li><a href="./view_course_CM.php">View</a></li>
+                </ul>
+            </li>
+            <li>
+                <span class="opener">Intervals</span>
+                <ul>
+                    <li><a href="./view&edit_intervals.php">Update</a></li>
                     <li>
                         <a href="#"></a>
                     </li>
-                    <li><a href="#">Update</a></li>
+                    <li><a href="./view_intervals.php">View</a></li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
                 </ul>
             </li>
              <li>
                 <span class="opener">Profile</span>
                 <ul>
-                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="./CM_profile_edit.php">Edit Profile</a></li>
                     <li>
                         <a href="#"></a>
                     </li>

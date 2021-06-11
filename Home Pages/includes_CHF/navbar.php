@@ -15,7 +15,6 @@
                 <!-- Menu -->
                 <nav id="menu">
                     <ul>
-                        <li><a href="#">Updated Marks</a></li>
                         <li>
                             <span class="opener">Course Marks</span>
                             <ul>
@@ -37,14 +36,14 @@
                                  <li>
                                     <a href="#"></a>
                                 </li>
-                                <li><a href="#">View Intervals</a></li>
+                                <li><a href="./view_intervals_CHF.php">View Intervals</a></li>
                                 
                             </ul>
                         </li>
                          <li>
                             <span class="opener">Profile</span>
                             <ul>
-                                <li><a href="#">Edit Profile</a></li>
+                                <li><a href="./CHF_profile_edit.php">Edit Profile</a></li>
                                 <li>
                                     <a href="#"></a>
                                 </li>
