@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include('../config.php');
-include('includes_G/header.php');
+include('includes_CM/header.php');
 
  
 
@@ -10,18 +10,7 @@ include('includes_G/header.php');
 <title>Dashboard</title> 
 </head>
 
-<?php
-
-    $_SESSION['Cultural']='CULTURAL';
-    $_SESSION['NSS']='NSS';
-    $_SESSION['Sports']='SPORTS';
-    $_SESSION['Others']='OTHERS';
-    $_SESSION['Special']='SPECIAL EVENTS';
-
-     
-?>
-
-  <!-- Banner -->
+                <!-- Banner -->
                 <section class="main-banner">
                     <div class="container-fluid">
                         <div class="row">
@@ -30,7 +19,7 @@ include('includes_G/header.php');
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="banner-caption">
-                                                <h4>Home Page of <em>Grace Mark Allocator</em></h4>
+                                                <h4>Home Page of <em>Course Mentor</em></h4>
                                                 
 
                                             </div>
@@ -65,11 +54,13 @@ include('includes_G/header.php');
                     </div>
                 </section>
 
+
             </div>
         </div>
 
+
 <?php
-    include('includes_G/navbar.php');
-    include('includes_G/scripts.php');
-    include('includes_G/footer.php');
+    include('includes_CM/navbar.php');
+    include('includes_CM/scripts.php');
+    include('includes_CM/footer.php');
    ?>
