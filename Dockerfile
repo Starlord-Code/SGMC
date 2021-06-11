@@ -5,5 +5,5 @@ WORKDIR /usr/src/myapp
 COPY . /usr/src/myapp
 
 CMD [ "php", "./index.php" ]
-
+EXPOSE 3000
 
