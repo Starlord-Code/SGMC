@@ -30,7 +30,15 @@ include('includes_CA/header.php');
     <div class="table-responsive">
       <?php
          $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-         $query = "SELECT * FROM studentsparticipated where branch='CSE' and year='3' and section='B'";
+         $query1="SELECT branch,year,section FROM classadvisor WHERE ID=161";
+         $query_run1=mysqli_query($connection,$query1);
+         $row =mysqli_fetch_assoc($query_run1);
+         $section=$row['section'];
+         $branch=$row['branch'];
+         $year=$row['year'];
+         
+         
+         $query = "SELECT * FROM studentsparticipated where branch='. $branch ' and year='. $year  ' and section=' . $section .'";
          
          $query_run = mysqli_query($connection, $query);
 
@@ -47,6 +55,7 @@ include('includes_CA/header.php');
             <th scope="col"> Year </th>
             <th scope="col"> Section </th>
             <th scope="col"> Grace Marks </th>
+            <th scope="col"> Apply </th>
           </tr>
         </thead>
         <tbody>
@@ -65,7 +74,6 @@ include('includes_CA/header.php');
             <td> <?php echo $row ['year']; ?> </td>
             <td> <?php echo $row ['section']; ?> </td>
             <td> <?php echo $row ['graceMarks']; ?> </td>
-            
           </tr>
           
           <?php
@@ -81,7 +89,9 @@ include('includes_CA/header.php');
         <button type="button" class="btn btn-info" onclick="location.href = './class advisor homepage.php';">Go back</button>
 
       </table>
-
+      <div style="padding-left:90%;">
+        <button type="button" class="btn btn-info" onclick="location.href = './class advisor homepage.php';">Go back</button>
+      </div>
     </div>
   </div>
 </div>
