@@ -16,16 +16,20 @@ include('includes_G/header.php');
     <h6 class="m-0 font-weight-bold text-primary">Students Marks Details
     </h6>
     <?php
-        if($_SESSION['updated']=="True")
+        $connection = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+        $query1="SELECT classadvisor FROM update_details WHERE ID = 1";
+        $query_run1=mysqli_query($connection,$query1);
+        $row =mysqli_fetch_assoc($query_run1);
+        if($row['classadvisor']=="True")
         {
             ?>
-            <h6 class="m-0 font-weight-bold text-primary">Marks had been updated by the class advisor</h6>
+            <h6 class="m-0 font-weight-bold text-primary" >Marks had been updated by the class advisor</h6>
             <?php
         }
         else
         {
             ?>
-            <h6 class="m-0 font-weight-bold text-primary">Marks have not yet been updated by the class advisor</h6>
+            <h6 class="m-0 font-weight-bold text-primary" >Marks have not yet been updated by the class advisor</h6>
             <?php
         }
     ?>
